@@ -11,6 +11,7 @@
     --Very-dark-blue-card: hsl(216, 50%, 16%);
     --Very-dark-blue-line: hsl(215, 32%, 27%);
     --White: hsl(0, 0%, 100%);
+    --Cyan-eye: hsl(178, 100%, 50%, 0.5);
 }
 
 body {
@@ -37,27 +38,31 @@ main {
         border-radius: 10px;
         position: relative;
         z-index: 1;
+       
 
-        &:hover {
-            opacity: 5.9;
-            filter: brightness(2.5);
+        &:hover {   
             cursor: pointer;
         }
 
         &:hover+.eye-image {
             display: block;
+            cursor: pointer;
         }
     }
 
     & .eye-image {
-        width: 48px;
+        background-color: var(--Cyan-eye);
+        padding: 110px;
+        width: 278px;
         position: absolute;
-        top: 140px;
+        top: 22px;
+        border-radius: 10px;
         left: 0px;
         right: 0;
         margin: auto;
         z-index: 2;
         display: none;
+       
     }
 
     & h1 {
