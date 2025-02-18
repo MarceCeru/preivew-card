@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Very-dark-blue-main: hsl(217, 54%, 11%);
+    --Very-dark-blue-card: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    background-color: var(--Very-dark-blue-main);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+main {
+    width: 330px;
+    padding: 1.5rem;
+    border-radius: 20px;
+    background-color: var(--Very-dark-blue-card);
+    font-family: "Outfit", serif;
+    margin-bottom: 20px;
+  
+
+    & .main-image {
+        width: 278px;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        position: relative;
+        z-index: 1;
+
+        &:hover {
+            opacity: 5.9;
+            filter: brightness(2.5);
+            cursor: pointer;
+        }
+
+        &:hover+.eye-image {
+            display: block;
+        }
+    }
+
+    & .eye-image {
+        width: 48px;
+        position: absolute;
+        top: 200px;
+        left: 0px;
+        right: 0;
+        margin: auto;
+        z-index: 2;
+        display: none;
+    }
+
+    & h1 {
+        width: 180px;
+        font-size: 1.30rem;
+        color: var(--White);
+        margin-bottom: 28px;
+
+        &:hover {
+            color: var(--Cyan);
+            cursor: pointer;
+        }
+    }
+
+    & .description {
+        width: 254px;
+        color: var(--Soft-blue);
+        line-height: 28px;
+        margin-bottom: 24px;
+    }
+
+    & hr {
+        border: none;
+        height: 1px;
+        background-color: var(--Very-dark-blue-line);
+        margin-bottom: 16px;
+    }
+
+    & .offer {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 16px;
+
+
+        & .ETH {
+            display: flex;
+            gap: 8px;
+
+            & .value {
+                color: var(--Cyan);
+                font-size: 16px;
+            }
+        }
+
+
+        & .time {
+            display: flex;
+            gap: 10px;
+
+            & .icon-watch {
+                height: 16px;
+            }
+
+            & .rest-time {
+                font-size: 16px;
+                color: var(--Soft-blue);
+            }
+        }
+
+    }
+
+    & .creator {
+        display: flex;
+        gap: 16px;
+
+        & .face {
+            height: 35px;
+            border: 1px solid var(--White);
+            border-radius: 50%;
+
+        }
+
+        & .name-creator {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            color: var(--Soft-blue);
+        }
+
+        & .real-name {
+            font-size: 14px;
+            color: var(--White);
+
+            &:hover {
+                cursor: pointer;
+                color: var(--Cyan);
+            }
+        }
+    }
+
+
+}
